@@ -1,47 +1,36 @@
-html {
-  height: 100%;
-  width: 100%;;
-}
+<!DOCTYPE html>
+<html>
 
-body {
-  margin: 0;
-}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Film Decision Pal</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
 
-main {
-  padding: 8px;
-}
+<body class="content-container">
+  <div class="top-gradient"></div>
+  <h1>Film Decision Pal</h1>
 
-.top-gradient, .bottom-gradient {
-  margin: 0;
-  background: linear-gradient(to bottom, rgb(150, 150, 150), rgb(255, 255, 255));
-  height: 35px;
-  width: 100%;
-}
-
-.bottom-gradient {
-  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(150, 150, 150));
-  height: 35px;
-  width: 100%;
-  position: relative;
-  bottom: 0;
-}
-
-h1 {
-  font-family: "papyrus", fantasy;
-  color: rgba(253, 142, 43, 5);
-  text-align: center;
-}
-
-input[type="submit"] {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.content-container {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 70px);
-}
+  <main>
+    <div class="content-container">
+    <div style="text-align: center">
+      <a href="https://www.16personalities.com/free-personality-test">Find 4 letter personality type:</a>
+      <form>
+        <br>
+        <label for="name">Personality Type:</label> <br>
+        <input type="text" id="personality" name="name"> <br>
+        <input type="submit" value="Submit">
+      </form>
+     <br> <div>
+      <p>Find your movies for you with your personality</p>
+    </div>
+    <img src="brad.jpeg" width="500" height="100">
+    </div>
+  </main>
+  <div class="bottom-gradient"></div>
+  <script src="script.js"></script>
+  </div>
+</body>  
+</html>
 
