@@ -1,0 +1,30 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  margin: 8px;
+}
+
+header, footer {
+  margin: 0;
+}
+
+.top-margin {
+background: linear-gradient(to bottom, rgb(150, 150, 150), rgb(255, 255, 255));
+  height: 35px;
+  width: 100%;
+}
+
+.bottom-gradient {
+background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(150, 150, 150));
+  height: 35px;
+  width: 100%;
+}
+
+h1 {
+  font-family: "papyrus", fantasy;
+  color: rgba(253, 142, 43, 5);
+  text-align: center;
+}
