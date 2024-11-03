@@ -7,7 +7,7 @@ form.addEventListener('submit', (event) => {
   const personalityValue = personality.value.toUpperCase(); 
 
   if (["INTJ", "INTP", "ENTJ", "ENTP", "INFJ", "INFP", "ENFJ", "ENFP", "ISTJ", "ISFJ", "ESTJ", "ESFJ", "ISTP", "ISFP", "ESTP", "ESFP"].includes(personalityValue)) {
-    window.location.href = 'results.html'; // Redirect to results.html
+    messageArea.innerHTML = ""
   } else {
     messageArea.innerHTML = "<p>Invalid personality type. Please enter a valid MBTI personality type.</p>"; 
   }
