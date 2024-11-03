@@ -16,6 +16,7 @@
     <div class="content-container">
       <div style="text-align: center">
         <p>Did you know that your personality can match with a movie?</p>
+        <p>Find the best movie for your personality!</p> 
         <p>Take this test to find out your personality type!</p>
         <a href="https://www.16personalities.com/free-personality-test" target="_blank">MBTI Test</a>
         <form method="POST" action="/">
@@ -26,17 +27,26 @@
         </form>
         <br>
         <div id="message-area"> </div>
-         <p>Find the best movie for your personality</p> 
 
-         <div id="message">{% if movie is not none and personality is not none %}
+         <!-- <div id="message">{% if movie is not none and personality is not none %}
           <h2>{{ movie }}</h2>
-          {% endif %}</div> 
-
-        <img src="static\brad.jpeg" width="50%" height="auto">
+          {% endif %}</div>  -->
+          <!-- test code-->
+          <div id="message">
+            {% if movie is not none and personality is not none %}
+              {% if 'not found' in movie %}
+                <h2 class="error-message">{{ movie }}</h2>
+              {% else %}
+                <h2 class="success-message">{{ movie }}</h2>
+              {% endif %}
+            {% endif %}
+          </div>
+        <br>
+        <!-- <img src="static\brad.jpeg" width="50%" height="auto" > -->
       </div>
   </main>
   <div class="bottom-gradient"></div>
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
   </div>
 </body>  
 </html>
