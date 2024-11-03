@@ -13,28 +13,17 @@ def my_form():
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-#     text = request.form['text']
-#     processed_text = text.upper()
-#     movie = find_movie(processed_text, all_personalities)
-#     return render_template('index.html', movie=movie)
-
-# def find_movie(processed_text, all_personalities):
-#     personality_type = processed_text
-#     return random.choice(all_personalities[personality_type])
     text = request.form['text']
     processed_text = text.upper()
+    movie = find_movie(processed_text, all_personalities)
+    return render_template('index.html', movie=movie, personality=processed_text)
 
-    # Debug: Print the processed input
-    print(f"Processed Personality Type: {processed_text}")
-
-    if processed_text in all_personalities:
-        movie = random.choice(all_personalities[processed_text])
-        print(f"Selected Movie: {movie}")  # Debug: Print the chosen movie
+def find_movie(processed_text, all_personalities):
+    personality_type = processed_text
+    if personality_type in all_personalities:
+        return random.choice(all_personalities[personality_type])
     else:
-        movie = "Invalid personality type. Please try again."
-        print("Invalid personality type provided.")  # Debug: Error message
-
-    return render_template('index.html', movie=movie)
+        return "Personality type not found. Please enter a valid 4-letter type."
 
 if __name__ == "__main__":
     app.run(debug=True)
