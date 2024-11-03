@@ -16,15 +16,20 @@
     <div class="content-container">
       <div style="text-align: center">
         <a href="https://www.16personalities.com/free-personality-test" target="_blank">Find 4 letter personality type:</a>
-        <form>
+        <form method="POST" action="/">
           <br>
           <label for="name">Personality Type:</label> <br>
-          <input type="text" id="personality" name="name"> <br>
+          <input type="text" id="personality" name="text"> <br>
           <input type="submit" value="Submit">
         </form>
         <br>
         <div id="message-area"> </div>
          <p>Find your movies for you with your personality</p> 
+
+         <div id="message">{% if movie is not none and personality is not none %}
+          <h2>{{ movie }}</h2>
+          {% endif %}</div> 
+
         <img src="brad.jpeg" width="500" height="100">
       </div>
   </main>
