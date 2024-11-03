@@ -1,0 +1,14 @@
+const form = document.querySelector('form');
+const personality = document.getElementById("personality");
+const messageArea = document.getElementById("message-area"); 
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent default form submission
+  const personalityValue = personality.value.toUpperCase(); 
+
+  if (["INTJ", "INTP", "ENTJ", "ENTP", "INFJ", "INFP", "ENFJ", "ENFP", "ISTJ", "ISFJ", "ESTJ", "ESFJ", "ISTP", "ISFP", "ESTP", "ESFP"].includes(personalityValue)) {
+    window.location.href = 'results.html'; // Redirect to results.html
+  } else {
+    messageArea.innerHTML = "<p>Invalid personality type. Please enter a valid MBTI personality type.</p>"; 
+  }
+});
