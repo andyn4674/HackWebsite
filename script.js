@@ -1,3 +1,5 @@
+import { createSignal, onCleanup } from 'solid-js';
+import { render, html } from 'solid-js/web';
 const form = document.querySelector('form');
 const personality = document.getElementById("personality");
 const messageArea = document.getElementById("message-area"); 
