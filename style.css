@@ -1,9 +1,9 @@
 /* Credit to MattMcAdams for the CSS-Boilerplate */
-https://github.com/MattMcAdams/CSS-Boilerplate
+/* https://github.com/MattMcAdams/CSS-Boilerplate */
 
 html {
   height: 100%;
-  width: 100%;;
+  width: 100%;
 }
 
 body {
@@ -42,9 +42,6 @@ input[type="submit"] {
   border-top-right-radius: 10px;
 }
 
-#message {
-  /* color: rgba(253, 142, 43, 5); */
-}
 .success-message {
   color: black;
 }
