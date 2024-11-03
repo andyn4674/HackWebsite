@@ -21,7 +21,7 @@ def my_form_post():
 def find_movie(processed_text, all_personalities):
     personality_type = processed_text
     if personality_type in all_personalities:
-        return random.choice(all_personalities[personality_type])
+        return "Your movie match is " + random.choice(all_personalities[personality_type]) + "!"
     else:
         return "Personality type not found. Please enter a valid 4-letter type."
 
